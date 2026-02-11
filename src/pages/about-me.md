@@ -41,10 +41,4 @@ I'm drawn to problems that sit at the intersection of **systems engineering** an
 - Deep Learning Specialization (Coursera)
 - Microsoft Azure AI Fundamentals certified
 
-## Let's Connect
 
-I'm always open to interesting conversations about distributed systems, ML infrastructure, or any challenging engineering problems. Feel free to reach out!
-
-[its.manas.sharma@gmail.com](mailto:its.manas.sharma@gmail.com)  
-[LinkedIn](https://www.linkedin.com/in/manas1104/)  
-[GitHub](https://github.com/Technocrat-dev)

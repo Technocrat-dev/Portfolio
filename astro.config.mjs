@@ -7,7 +7,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://manassharma.dev",
+  site: "https://portfolio.its-manas-sharma.workers.dev",
   integrations: [preact(), icon(), sitemap(),],
 
   vite: {
