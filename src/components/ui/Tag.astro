@@ -1,0 +1,9 @@
+---
+const { tag, forceDark = false } = Astro.props;
+---
+
+<span
+  class={`max-md:text-xs text-sm font-medium ${forceDark ? 'text-neutral-400 bg-zinc-800' : 'text-zinc-500 dark:text-neutral-400'} transition-all ease-in-out duration-300 px-4 py-1 max-md:px-3 rounded-full ${forceDark ? 'bg-zinc-800' : 'bg-mint-950/5 dark:bg-zinc-800'}`}
+>
+  {tag}
+</span>

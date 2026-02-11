@@ -1,0 +1,45 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+
+const EXPERIENCE = [
+  {
+    date: "May 2025 - Jul 2025",
+    title: "Machine Learning Intern",
+    company: "Reliance Industries Limited",
+    description:
+      "Built real-time occupancy detection using YOLOv11 and DeepSort across RTSP streams achieving 60+ FPS. Designed Multi-Camera Manager with spatial deduplication for 10+ concurrent feeds. Implemented adaptive tracking with motion blur detection, improving accuracy by 25%. Developed FastAPI backend with WebSocket real-time updates and SQLAlchemy persistence.",
+  },
+];
+---
+
+<section
+  class="scroll-m-16 p-8 max-sm:px-4"
+  id="experience"
+  aria-label="Professional experience timeline"
+>
+  <div
+    class="relative mx-auto flex max-w-7xl flex-col gap-8 border-l-4 border-riptide-300 py-12 dark:border-mint-500 max-md:gap-4 max-md:py-8"
+  >
+    <div class="flex items-center gap-4 pl-7 max-md:gap-2">
+      <Icon
+        class="text-3xl dark:text-white text-mint-500 max-md:text-2xl"
+        name="briefcase"
+        aria-hidden="true"
+      />
+      <Heading text="Experience" level={2} />
+    </div>
+
+    {
+      EXPERIENCE.map((exp: any) => (
+        <ExperienceItem
+          date={exp.date}
+          title={exp.title}
+          company={exp.company}
+          description={exp.description}
+        />
+      ))
+    }
+  </div>
+</section>

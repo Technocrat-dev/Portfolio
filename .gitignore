@@ -1,0 +1,38 @@
+# build output
+dist/
+
+# vscode settings
+.vscode/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+build_output.txt
+
+# Temporary/misc
+*.tmp
+.cache/

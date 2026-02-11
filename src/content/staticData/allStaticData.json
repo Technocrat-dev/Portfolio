@@ -1,0 +1,27 @@
+{
+  "profileImage": "",
+  "profileAlt": "Manas Sharma - Software Engineer",
+  "profileLink": "/about-me",
+  "profileTitle": "Software Engineer",
+  "profileName": "Manas Sharma",
+  "github": "https://github.com/Technocrat-dev",
+  "githubText": "Check out my GitHub",
+  "portfolioImage": "/images/portfolio.webp",
+  "email": "its.manas.sharma@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/manas1104/",
+  "alias": "Manas Sharma",
+  "contactSectionTitle": "Have a project in mind or want to collaborate?",
+  "contactSectionSubtitle": "Let's connect.",
+  "contactSectionButtonText": "Contact Me",
+  "contactSectionButtonIcon": "paperplane",
+  "techsTitle": "TECHS",
+  "githubIconName": "github",
+  "linkedinIconName": "linkedin",
+  "emailIconName": "envelope",
+  "pageTitle": "Manas Sharma | Software Engineer",
+  "pageDescription": "Software Engineer specializing in distributed systems, AI/ML, and full-stack development. B.Tech CS at Manipal, ML Intern at Reliance Industries.",
+  "OGImage": {
+    "url": "/images/imagedefault.webp",
+    "alt": "Manas Sharma - Software Engineer portfolio showcasing distributed systems, AI/ML projects, and full-stack development."
+  }
+}
