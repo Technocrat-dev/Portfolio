@@ -8,29 +8,29 @@ image:
   alt: "Manas Sharma - Software Engineer"
 ---
 
-I'm a Computer Science student at **Manipal Academy of Higher Education** with a deep fascination for building systems that operate at scale — from distributed message brokers processing 100K+ messages per second to AI pipelines that can detect and correct their own errors.
+I'm a CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've built distributed message brokers that handle 100K+ messages per second, AI pipelines that catch their own mistakes, and real-time computer vision systems deployed in corporate environments.
 
 ## My Path into Engineering
 
-My journey into tech wasn't about following a trend — it was driven by genuine curiosity about how complex systems work under the hood. While most people are happy using tools, I've always wanted to understand (and rebuild) them from scratch. That mindset led me to take apart everything from consensus algorithms to neural network architectures.
+I got into tech because I genuinely wanted to know how things work under the hood. Not just using tools, but actually understanding them well enough to rebuild them from scratch. That curiosity is what pushed me to dig into consensus algorithms, build my own message brokers, and tear apart neural network architectures to see what makes them tick.
 
-At **Manipal**, I've maintained an **8.7 CGPA** while spending most of my time building real projects — not just course assignments, but production-grade systems with proper architecture, testing, and deployment pipelines.
+At **Manipal**, I've kept an **8.7 CGPA** while focusing heavily on building real projects. Not coursework projects, but actual production systems with proper architecture, tests, and CI/CD pipelines.
 
 ## Building Real Systems
 
-I believe the best way to learn distributed systems is to build one. So I built a **Kafka-inspired message broker from scratch in Go** — complete with Raft consensus, gRPC transport, log replication, and segment-based storage. No external libraries for the core — just raw implementation of the papers.
+I think the best way to actually learn distributed systems is to build one yourself. So I wrote a **Kafka-inspired message broker from scratch in Go** with Raft consensus, gRPC transport, log replication, and segment-based storage. No external libraries for the core. Just me reading the papers and implementing them.
 
-On the AI/ML side, I built **NeuralRAG**, a self-correcting RAG pipeline that doesn't just retrieve and generate — it validates its own outputs, detects hallucinations, and automatically reformulates queries. The kind of system where you learn as much from handling the failure modes as from the happy path.
+On the AI/ML side, I built **NeuralRAG**, a self-correcting RAG pipeline that goes beyond basic retrieval. It validates its own outputs, catches hallucinations, and automatically reformulates queries when the answers aren't good enough. I learned more from debugging the failure modes than from getting the happy path working.
 
 ## Industry Experience
 
-During my internship at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort** — processing 10+ concurrent RTSP camera feeds at 60+ FPS. The highlight was designing a multi-camera spatial deduplication system that prevented double-counting across overlapping camera zones.
+During my internship at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort**, processing 10+ concurrent RTSP camera feeds at 60+ FPS. The most interesting part was figuring out multi-camera spatial deduplication to avoid double-counting people visible from overlapping camera angles.
 
-I also built an **Edge Vision Gateway** — a privacy-preserving pipeline that processes video at the edge using OpenVINO-optimized pose estimation, ensuring zero raw footage leaves the device. GDPR compliance baked into the architecture, not bolted on.
+I also built an **Edge Vision Gateway**, a privacy-preserving pipeline that processes video locally using OpenVINO-optimized pose estimation. The key idea is that zero raw footage ever leaves the device. Privacy wasn't an afterthought here; it was the whole point of the architecture.
 
 ## What I Care About
 
-I'm drawn to problems that sit at the intersection of **systems engineering** and **machine learning** — where you need both algorithmic depth and infrastructure thinking. Whether it's designing a fault-tolerant message broker or optimizing an inference pipeline for edge deployment, I enjoy the challenge of making things work reliably at scale.
+I'm most interested in problems where **systems engineering** meets **machine learning**. The kind of work where you need both algorithmic depth and solid infrastructure thinking. Whether it's making a message broker fault-tolerant or squeezing an inference pipeline onto edge hardware, I like the challenge of making things work reliably when it matters.
 
 **Currently exploring**: Distributed ML systems, edge AI optimization, and production ML pipelines.
 
