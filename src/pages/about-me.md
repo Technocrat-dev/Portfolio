@@ -34,7 +34,7 @@ I'm drawn to problems that sit at the intersection of **systems engineering** an
 
 **Currently exploring**: Distributed ML systems, edge AI optimization, and production ML pipelines.
 
-## Competitive Programming
+## Small Achievements and Certs
 
 - **300+** problems solved on LeetCode & CodeForces
 - **Top 10** at Honeywell SDG Hackspace 2025

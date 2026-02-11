@@ -145,7 +145,7 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown pre {
-	@apply  w-full h-full px-8 py-12   ;
+	@apply  w-full h-auto px-8 py-6   ;
 } 
 
 .markdown strong{
