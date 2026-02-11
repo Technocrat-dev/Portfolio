@@ -3,7 +3,7 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'NeuralRAG'
 pubDate: 2025-01-20
 description: 'A self-correcting Retrieval-Augmented Generation system with LLaMA3, ChromaDB, and hybrid BM25+vector search — featuring hallucination detection and automatic query refinement.'
-languages: ["python", "fastapi", "nextjs", "docker"]
+languages: ["python", "langgraph", "chromadb", "fastapi", "nextjs", "docker"]
 image:
   url: ""
   alt: "NeuralRAG self-correcting pipeline"

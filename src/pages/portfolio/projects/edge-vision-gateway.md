@@ -3,7 +3,7 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'Edge Vision Gateway'
 pubDate: 2025-05-20
 description: 'A privacy-preserving edge AI pipeline using YOLOv11-Pose and OpenVINO with 4.2× speedup via INT8 quantization, SHA-256 chain of custody, and GDPR-compliant pose skeleton anonymization.'
-languages: ["python", "docker"]
+languages: ["python", "opencv", "openvino", "onnx", "flask", "docker"]
 image:
   url: ""
   alt: "Edge Vision Gateway privacy pipeline"

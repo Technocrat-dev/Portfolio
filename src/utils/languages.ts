@@ -105,6 +105,42 @@ export const languages: Record<string, Language> = {
     name: "Markdown",
     iconName: "markdown",
   },
+  sql: {
+    name: "SQL",
+    iconName: "sql",
+  },
+  cpp: {
+    name: "C++",
+    iconName: "cpp",
+  },
+  java: {
+    name: "Java",
+    iconName: "java",
+  },
+  langchain: {
+    name: "LangChain",
+    iconName: "langchain",
+  },
+  langgraph: {
+    name: "LangGraph",
+    iconName: "langgraph",
+  },
+  protobuf: {
+    name: "Protobuf",
+    iconName: "protobuf",
+  },
+  gcp: {
+    name: "GCP",
+    iconName: "gcp",
+  },
+  onnx: {
+    name: "ONNX",
+    iconName: "onnx",
+  },
+  scikitlearn: {
+    name: "Scikit-learn",
+    iconName: "scikitlearn",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {

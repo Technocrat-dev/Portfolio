@@ -3,7 +3,7 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'AI Chair Occupancy Analytics'
 pubDate: 2025-06-15
 description: 'Enterprise-grade real-time chair occupancy detection using YOLOv11 and DeepSort with multi-camera spatial deduplication, achieving 60+ FPS across 10+ concurrent RTSP streams.'
-languages: ["python", "fastapi", "docker"]
+languages: ["python", "pytorch", "opencv", "fastapi", "websocket", "docker"]
 image:
   url: ""
   alt: "AI Chair Occupancy Analytics dashboard"

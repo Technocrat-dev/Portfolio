@@ -3,7 +3,7 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'Distributed Message Broker'
 pubDate: 2025-01-15
 description: 'A high-performance, fault-tolerant distributed message broker built from scratch in Go with Raft consensus, gRPC transport, and topic-based pub/sub — achieving 100K+ messages/sec.'
-languages: ["go", "docker", "kubernetes", "git"]
+languages: ["go", "grpc", "protobuf", "docker", "kubernetes"]
 image:
   url: ""
   alt: "Distributed Message Broker architecture"
