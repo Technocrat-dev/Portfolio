@@ -48,4 +48,4 @@ Built with **LangGraph**, the system runs a multi-step correction loop:
 
 ## Links
 
-[View on GitHub](https://github.com/Technocrat-dev/NeuralRAG)
+[View on GitHub](https://github.com/Technocrat-dev/RAG_CHATBOT)

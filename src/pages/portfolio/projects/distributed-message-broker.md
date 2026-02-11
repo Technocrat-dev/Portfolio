@@ -47,4 +47,4 @@ The broker runs as a **3-node cluster** with automatic leader election via the *
 
 ## Links
 
-[View on GitHub](https://github.com/Technocrat-dev/Distributed_Message_Broker)
+[View on GitHub](https://github.com/Technocrat-dev/Distributed_Broker)

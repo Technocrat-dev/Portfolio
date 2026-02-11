@@ -54,4 +54,4 @@ A glassmorphism-styled dashboard built with FastAPI + WebSocket that shows:
 
 ## Links
 
-[View on GitHub](https://github.com/Technocrat-dev/AI-Chair-Occupancy-Analytics)
+[View on GitHub](https://github.com/Technocrat-dev/AI-occupancy-analytics)

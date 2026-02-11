@@ -58,4 +58,4 @@ Edge Simulators -> FastAPI Backend -> PostgreSQL
 
 ## Links
 
-[View on GitHub](https://github.com/Technocrat-dev/fleet-vehicle-gateway)
+[View on GitHub](https://github.com/Technocrat-dev/Fleet-Vehicle-Gateway)

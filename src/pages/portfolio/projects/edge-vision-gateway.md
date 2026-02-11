@@ -59,4 +59,4 @@ Camera Feed -> Frame Buffer -> YOLOv11-Pose -> Pose Extraction
 
 ## Links
 
-[View on GitHub](https://github.com/Technocrat-dev/Edge-Vision-Gateway)
+[View on GitHub](https://github.com/Technocrat-dev/Privacy_Edge_AI_Vision_Gateway)
