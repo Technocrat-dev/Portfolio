@@ -9,7 +9,7 @@ image:
   alt: "Fleet Vehicle Data Gateway dashboard"
 --- 
 
-A **production-deployed** real-time fleet vehicle monitoring system that tracks 50+ vehicles with sub-second update latency. Built as a showcase project for a Woven by Toyota internship application.
+A **production-deployed** real-time fleet vehicle monitoring system that tracks 50+ vehicles with sub-second update latency.
 
 ## Real-Time Monitoring
 
