@@ -11,6 +11,7 @@ interface Props {
     isLoading?: boolean;
     isExternal?: boolean;
     isActive?: boolean;
+    download?: string;
     class?: string;
 }
 
@@ -24,6 +25,7 @@ const {
     isLoading = false,
     isExternal = false,
     isActive = false,
+    download,
     class: className = ""
 } = Astro.props as Props;
 import { Icon } from "astro-icon/components";
@@ -140,6 +142,9 @@ const externalAttributes = isExternalLink ? {
     rel: 'noopener noreferrer'
 } : {};
 
+// Download attribute
+const downloadAttributes = download ? { download } : {};
+
 // Loading state
 const loadingText = isLoading ? 'Loading...' : text;
 const loadingAriaLabel = isLoading ? `${buttonAriaLabel} - Loading` : buttonAriaLabel;
@@ -158,6 +163,7 @@ const loadingAriaLabel = isLoading ? `${buttonAriaLabel} - Loading` : buttonAria
         aria-busy={isLoading}
         aria-pressed={isActive}
         {...externalAttributes}
+        {...downloadAttributes}
     >
         {iconName && <Icon name={iconName} class={iconClasses[variant]} aria-hidden="true" />}
         {isLoading && <Icon name="mdi:loading" class="animate-spin" aria-hidden="true" />}
