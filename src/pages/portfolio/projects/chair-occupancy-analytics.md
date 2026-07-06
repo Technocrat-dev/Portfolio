@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'AI Chair Occupancy Analytics'
 pubDate: 2025-06-15
-description: 'Real-time chair occupancy detection using YOLOv11 and DeepSort with multi-camera spatial deduplication, hitting 60+ FPS across 10+ concurrent RTSP streams.'
+description: 'Real-time chair occupancy detection using YOLOv11 and DeepSort with multi-camera spatial deduplication, hitting 30+ FPS across 10+ concurrent RTSP streams.'
 languages: ["python", "pytorch", "opencv", "fastapi", "websocket", "docker"]
 image:
   url: ""
@@ -16,7 +16,7 @@ Built this during my **ML internship at Reliance Industries**. It does real-time
 - **YOLOv11** for chair and person detection with custom-trained weights
 - **DeepSort** tracking to keep persistent identity across frames
 - **Spatial association** that maps people to specific chairs using IoU overlap
-- **60+ FPS** processing across concurrent RTSP streams
+- **30+ FPS** processing with sub-second latency across concurrent RTSP streams on GPU
 
 ## Multi-Camera Architecture
 

@@ -2,29 +2,31 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Distributed Message Broker'
 pubDate: 2025-01-15
-description: 'A high-performance, fault-tolerant distributed message broker built from scratch in Go with Raft consensus, gRPC transport, and topic-based pub/sub. Achieves 100K+ messages/sec.'
+description: 'A high-performance, fault-tolerant distributed message broker in Go — HashiCorp Raft consensus, partition sharding, ISR replication, gRPC transport, and topic-based pub/sub. Achieves 100K+ messages/sec.'
 languages: ["go", "grpc", "protobuf", "docker", "kubernetes"]
 image:
   url: ""
   alt: "Distributed Message Broker architecture"
 --- 
 
-A **Kafka-inspired distributed message broker** built entirely from scratch in Go. No external dependencies for the core consensus or messaging layers. I wanted to really understand distributed systems, so I built one.
+A **Kafka-inspired distributed message broker** built in Go. Consensus rides on **HashiCorp's Raft library**; everything above it — the storage engine, partition sharding, ISR replication, and the full producer/consumer protocol — is my own design and implementation. I wanted to really understand distributed systems, so I built one.
 
 ## Architecture
 
-The broker runs as a **3-node cluster** with automatic leader election via the **Raft consensus protocol**. Each node handles producer and consumer connections over **gRPC** with Protocol Buffer serialization.
+The broker runs as a **3-node cluster** with automatic leader election and log replication via **HashiCorp Raft**. Each node handles producer and consumer connections over **gRPC** with Protocol Buffer serialization.
 
 ### Core Components
-- **Raft Consensus Layer**: Custom implementation with leader election, log replication, and heartbeat management
-- **Topic-Partition Manager**: Topic-based pub/sub with configurable partition counts and replication factors
-- **Storage Engine**: Segment-based append-only log with configurable fsync policies
+- **Consensus Layer**: HashiCorp Raft integration — leader election, log replication, heartbeat management, and cluster membership
+- **Topic-Partition Manager**: Topic-based pub/sub with **partition sharding**, configurable partition counts (1000+ partitions supported), and replication factors
+- **Replication Layer**: Leader-follower replication with **in-sync replica (ISR)** tracking and **sub-5s failover**
+- **Storage Engine**: Segment-based append-only log with log compaction and configurable fsync policies
 - **gRPC API Layer**: Full producer/consumer API with streaming support
 
 ## Performance
 
 - **100K+ messages/second** throughput with batched writes
-- **Snappy compression** reducing message payload by ~60%
+- **Gzip / Snappy / LZ4 compression** reducing storage by ~60%
+- **Sub-5s failover** on leader loss
 - **Configurable fsync** so you can choose between durability and throughput
 - **Segment-based storage** with automatic compaction
 
@@ -41,7 +43,7 @@ The broker runs as a **3-node cluster** with automatic leader election via the *
 
 - **Go**: Core broker implementation
 - **gRPC + Protobuf**: High-performance RPC framework
-- **Raft**: Consensus algorithm (custom implementation)
+- **HashiCorp Raft**: Consensus (leader election + log replication)
 - **Docker & Kubernetes**: Container orchestration
 - **Prometheus**: Metrics and monitoring
 

@@ -2,14 +2,14 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Fleet Vehicle Data Gateway'
 pubDate: 2025-02-05
-description: 'A production-deployed real-time fleet monitoring platform with FastAPI, Next.js, WebSocket live updates, OAuth 2.0 authentication, and geofencing. Deployed on Railway + Vercel.'
+description: 'A fully deployed real-time fleet monitoring platform with FastAPI, Next.js, WebSocket live updates, OAuth 2.0 authentication, and geofencing — live demo included.'
 languages: ["python", "fastapi", "nextjs", "ts", "postgresql", "docker"]
 image:
   url: ""
   alt: "Fleet Vehicle Data Gateway dashboard"
 --- 
 
-A **production-deployed** real-time fleet vehicle monitoring system that tracks 50+ vehicles with sub-second update latency.
+A **fully deployed** real-time fleet vehicle monitoring system that tracks a simulated fleet of 50+ vehicles with sub-second update latency — try the live demo below.
 
 ## Real-Time Monitoring
 
@@ -42,9 +42,9 @@ Edge Simulators -> FastAPI Backend -> PostgreSQL
 
 ## Deployment
 
-- **Backend** on Railway (auto-deploy from GitHub)
+- **Backend** containerized and deployed on GCP Cloud Run
 - **Frontend** on Vercel (preview + production deployments)
-- **Database** on Railway PostgreSQL
+- **Database** on managed PostgreSQL
 - **CI/CD** via GitHub Actions with linting, testing, and auto-deploy
 
 ## Technologies

@@ -5,11 +5,18 @@ import { Icon } from "astro-icon/components";
 
 const EXPERIENCE = [
   {
+    date: "May 2026 - Present",
+    title: "Backend Engineering Intern",
+    company: "RupeeFlo (Fintech)",
+    description:
+      "Working on NRI banking & investment infrastructure. Migrated document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend, collapsing a 3-call chain into one API — proved 0% divergence pre-cutover with a PDF-diff parity harness. Designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery and Redis, using atomic SETNX locks, rate limits, and idempotent escalation, validated across 27 replay/race edge cases. Shipped an AI support draft generator to production: Freshdesk history and Customer-360 data fed into structured LLM tool-use calls, producing agent-reviewable drafts in 10–13s with 70% coverage on 78 real tickets.",
+  },
+  {
     date: "May 2025 - Jul 2025",
     title: "Machine Learning Intern",
     company: "Reliance Industries Limited",
     description:
-      "Built real-time occupancy detection using YOLOv11 and DeepSort across RTSP streams achieving 60+ FPS. Designed Multi-Camera Manager with spatial deduplication for 10+ concurrent feeds. Implemented adaptive tracking with motion blur detection, improving accuracy by 25%. Developed FastAPI backend with WebSocket real-time updates and SQLAlchemy persistence.",
+      "Built real-time occupancy detection using YOLOv11 and DeepSort across 10+ concurrent RTSP streams, achieving 30+ FPS throughput with sub-second latency on GPU deployment. Designed a Multi-Camera Manager with spatial deduplication and priority-based conflict resolution to eliminate duplicate counts across overlapping FOVs. Implemented adaptive tracking with motion blur detection, improving accuracy by 25%, plus a FastAPI backend with WebSocket real-time updates and SQLAlchemy persistence.",
   },
 ];
 ---

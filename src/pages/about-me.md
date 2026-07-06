@@ -1,24 +1,24 @@
 ---
 layout: /src/layouts/MarkdownAbout.astro
 title: "Manas Sharma | Software Engineer"
-description: "Software Engineer specializing in distributed systems, AI/ML, and full-stack development. B.Tech CS at Manipal Academy of Higher Education."
+description: "Software Engineer specializing in distributed systems, backend engineering, and AI/ML. Final-year B.Tech CS at Manipal; Backend Engineering Intern at RupeeFlo, previously ML Intern at Reliance Industries."
 author: "Manas Sharma"
 image:
   url: ""
   alt: "Manas Sharma - Software Engineer"
 ---
 
-I'm a CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've built distributed message brokers that handle 100K+ messages per second, VLM evaluation pipelines with systematic prompt engineering, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
+I'm a final-year CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've shipped backend infrastructure at a fintech startup, built distributed message brokers that handle 100K+ messages per second, VLM evaluation pipelines with systematic prompt engineering, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
 
 ## My Path into Engineering
 
 I got into tech because I genuinely wanted to know how things work under the hood. Not just using tools, but actually understanding them well enough to rebuild them from scratch. That curiosity is what pushed me to dig into consensus algorithms, build my own message brokers, design VLM evaluation frameworks, and tear apart neural network architectures to see what makes them tick.
 
-At **Manipal**, I've kept an **8.7 CGPA** while focusing heavily on building real projects. Not coursework projects, but actual production systems with proper architecture, tests, and CI/CD pipelines.
+At **Manipal**, I've kept an **8.5 CGPA** while focusing heavily on building real projects. Not coursework projects, but complete systems with proper architecture, tests, and CI/CD pipelines.
 
 ## Building Real Systems
 
-I think the best way to actually learn distributed systems is to build one yourself. So I wrote a **Kafka-inspired message broker from scratch in Go** with Raft consensus, gRPC transport, log replication, and segment-based storage. No external libraries for the core. Just me reading the papers and implementing them.
+I think the best way to actually learn distributed systems is to build one yourself. So I wrote a **Kafka-inspired message broker in Go** — HashiCorp Raft for consensus, with my own storage engine, partition sharding, ISR replication, and gRPC producer/consumer protocol on top. Reading the Raft paper to understand what the library was doing under the hood taught me more than any course.
 
 On the AI/ML side, I built a **Driving Scene Description Generator** that processes autonomous driving images through Vision-Language Models with 8 systematically designed prompt variants and evaluates the outputs against ground truth using 8 different metrics. The most valuable part was building the AI error analysis agent that detects systematic failure patterns and auto-generates improved prompts.
 
@@ -28,16 +28,20 @@ And **NeuralRAG**, a self-correcting RAG pipeline that validates its own outputs
 
 ## Industry Experience
 
-During my internship at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort**, processing 10+ concurrent RTSP camera feeds at 60+ FPS. The most interesting part was figuring out multi-camera spatial deduplication to avoid double-counting people visible from overlapping camera angles.
+I'm currently a **Backend Engineering Intern at RupeeFlo**, a fintech building NRI banking and investment infrastructure. I migrated the document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend — collapsing a 3-call chain into one API and proving **0% divergence** pre-cutover with a PDF-diff parity harness — designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery, Redis, and atomic SETNX locks validated across 27 replay/race edge cases, and shipped an AI support draft generator to production that turns Freshdesk history and Customer-360 data into agent-reviewable drafts in 10–13 seconds. Working where correctness is regulatory, not optional, changes how you write code.
+
+Before that, at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort**, processing 10+ concurrent RTSP camera feeds at 30+ FPS. The most interesting part was figuring out multi-camera spatial deduplication to avoid double-counting people visible from overlapping camera angles.
 
 ## What I Care About
 
 I'm most interested in problems where **systems engineering** meets **machine learning**. The kind of work where you need both algorithmic depth and solid infrastructure thinking. Whether it's making a message broker fault-tolerant, designing VLM evaluation pipelines, or building production ML systems end-to-end, I like the challenge of making things work reliably when it matters.
 
-**Currently exploring**: VLM prompt engineering, production ML pipelines, and distributed systems at scale.
+**Currently exploring**: LLM tool-use systems, ML infrastructure, and distributed systems at scale.
 
-## Small Achievements and Certs
+## Achievements and Certs
 
+- **Winner**, Atos Hackathon 2026 (100+ teams)
+- **4th place**, CCL Hackathon 2026 (500+ teams)
 - **300+** problems solved on LeetCode & CodeForces
 - **Top 10** at Honeywell SDG Hackspace 2025
 - Deep Learning Specialization (Coursera)

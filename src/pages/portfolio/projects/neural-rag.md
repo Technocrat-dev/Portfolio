@@ -9,7 +9,7 @@ image:
   alt: "NeuralRAG self-correcting pipeline"
 --- 
 
-**NeuralRAG** is a production-grade **Self-Correcting RAG** pipeline that goes beyond basic retrieval and generation. It validates its own outputs, catches hallucinations, and automatically refines queries when the answers aren't good enough.
+**NeuralRAG** is a **Self-Correcting RAG** pipeline that goes beyond basic retrieval and generation. It validates its own outputs, catches hallucinations, and automatically refines queries when the answers aren't good enough.
 
 ## Self-Correcting Pipeline
 

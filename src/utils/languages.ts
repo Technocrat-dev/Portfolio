@@ -93,6 +93,18 @@ export const languages: Record<string, Language> = {
     name: "Flask",
     iconName: "flask",
   },
+  django: {
+    name: "Django",
+    iconName: "django",
+  },
+  celery: {
+    name: "Celery",
+    iconName: "celery",
+  },
+  redis: {
+    name: "Redis",
+    iconName: "redis",
+  },
   openvino: {
     name: "OpenVINO",
     iconName: "openvino",
