@@ -2,14 +2,14 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Fleet Vehicle Data Gateway'
 pubDate: 2025-02-05
-description: 'A fully deployed real-time fleet monitoring platform with FastAPI, Next.js, WebSocket live updates, OAuth 2.0 authentication, and geofencing — live demo included.'
+description: 'A fully deployed real-time fleet monitoring platform with FastAPI, Next.js, WebSocket live updates, OAuth 2.0 authentication, and geofencing. Live demo included.'
 languages: ["python", "fastapi", "nextjs", "ts", "postgresql", "docker"]
 image:
   url: ""
   alt: "Fleet Vehicle Data Gateway dashboard"
 --- 
 
-A **fully deployed** real-time fleet vehicle monitoring system that tracks a simulated fleet of 50+ vehicles with sub-second update latency — try the live demo below.
+A **fully deployed** real-time fleet vehicle monitoring system that tracks a simulated fleet of 50+ vehicles with sub-second update latency. Try the live demo below.
 
 ## Real-Time Monitoring
 

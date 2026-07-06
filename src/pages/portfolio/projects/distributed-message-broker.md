@@ -2,21 +2,21 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Distributed Message Broker'
 pubDate: 2025-01-15
-description: 'A high-performance, fault-tolerant distributed message broker in Go — HashiCorp Raft consensus, partition sharding, ISR replication, gRPC transport, and topic-based pub/sub. Achieves 100K+ messages/sec.'
+description: 'A high-performance, fault-tolerant distributed message broker in Go with HashiCorp Raft consensus, partition sharding, ISR replication, gRPC transport, and topic-based pub/sub. Achieves 100K+ messages/sec.'
 languages: ["go", "grpc", "protobuf", "docker", "kubernetes"]
 image:
   url: ""
   alt: "Distributed Message Broker architecture"
 --- 
 
-A **Kafka-inspired distributed message broker** built in Go. Consensus rides on **HashiCorp's Raft library**; everything above it — the storage engine, partition sharding, ISR replication, and the full producer/consumer protocol — is my own design and implementation. I wanted to really understand distributed systems, so I built one.
+A **Kafka-inspired distributed message broker** built in Go. Consensus rides on **HashiCorp's Raft library**; everything above it (the storage engine, partition sharding, ISR replication, and the full producer/consumer protocol) is my own design and implementation. I wanted to really understand distributed systems, so I built one.
 
 ## Architecture
 
 The broker runs as a **3-node cluster** with automatic leader election and log replication via **HashiCorp Raft**. Each node handles producer and consumer connections over **gRPC** with Protocol Buffer serialization.
 
 ### Core Components
-- **Consensus Layer**: HashiCorp Raft integration — leader election, log replication, heartbeat management, and cluster membership
+- **Consensus Layer**: HashiCorp Raft integration covering leader election, log replication, heartbeat management, and cluster membership
 - **Topic-Partition Manager**: Topic-based pub/sub with **partition sharding**, configurable partition counts (1000+ partitions supported), and replication factors
 - **Replication Layer**: Leader-follower replication with **in-sync replica (ISR)** tracking and **sub-5s failover**
 - **Storage Engine**: Segment-based append-only log with log compaction and configurable fsync policies

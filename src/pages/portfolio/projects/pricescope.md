@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'PriceScope'
 pubDate: 2025-02-15
-description: 'An end-to-end multimodal deep learning system for marketplace price prediction. Trained on 1.48M Mercari listings with a BiLSTM + Attention + MLP fusion model achieving 0.430 RMSLE — beats XGBoost and LightGBM baselines. Full stack with FastAPI, Next.js, and MongoDB.'
+description: 'An end-to-end multimodal deep learning system for marketplace price prediction. Trained on 1.48M Mercari listings with a BiLSTM + Attention + MLP fusion model achieving 0.430 RMSLE, beating XGBoost and LightGBM baselines. Full stack with FastAPI, Next.js, and MongoDB.'
 languages: ["python", "pytorch", "fastapi", "nextjs", "ts", "mongo", "docker"]
 image:
   url: ""
