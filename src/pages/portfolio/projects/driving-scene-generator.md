@@ -42,9 +42,13 @@ The real focus is on the prompt engineering side. I built 8 systematically desig
 - **Weather and lighting accuracy** against BDD100K labels
 - **LLM-as-Judge** for overall quality rating
 
+## Results
+
+Structured-output prompting (the combined role-play + chain-of-thought + anti-hallucination variant) cut hallucinations by 35% and count error by 38% versus the zero-shot baseline.
+
 ## AI Agent
 
-An agent that reads evaluation results, detects systematic error patterns (like hallucinating buses or confusing overcast with clear weather), and automatically generates prompt improvements to address those failures.
+An agent that reads evaluation results, detects systematic error patterns (like hallucinating buses or confusing overcast with clear weather), and automatically generates prompt improvements to address those failures. The pipeline runs a dual VLM backend with rate-limit-aware checkpoint/resume orchestration, so a long evaluation run can pick back up without losing progress.
 
 ## Technologies
 
