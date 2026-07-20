@@ -28,7 +28,7 @@ And **NeuralRAG**, a self-correcting RAG pipeline that validates its own outputs
 
 ## Industry Experience
 
-Over summer 2026 I was a **Backend Engineering Intern at RupeeFlo**, a fintech building NRI banking and investment infrastructure. I migrated the document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend, collapsing a 3-call chain into one API, cutting processing time by **80%**, and proving **0% divergence** pre-cutover with a PDF-diff parity harness. I designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery, Redis, and atomic SETNX locks validated across 27 replay/race edge cases, and shipped an AI support draft generator to production that turns Freshdesk history and Customer-360 data into agent-reviewable drafts in 10–13 seconds. Working where correctness is regulatory, not optional, changes how you write code.
+Over summer 2026 I was a **Backend Engineering Intern at RupeeFlo**, a fintech building NRI banking and investment infrastructure. I migrated the document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend, collapsing a 3-call chain into one API, cutting processing time by **80%**, and proving **0% divergence** pre-cutover with a PDF-diff parity harness. I designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery, Redis, and atomic SETNX locks, serving 15,000+ users and validated across 27 replay/race edge cases, and shipped an AI support draft generator to production that turns Freshdesk history and Customer-360 data into agent-reviewable drafts in 10–13 seconds. Working where correctness is regulatory, not optional, changes how you write code.
 
 Before that, at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort**, processing 10+ concurrent RTSP camera feeds at 30+ FPS. The most interesting part was figuring out multi-camera spatial deduplication to avoid double-counting people visible from overlapping camera angles.
 
@@ -44,6 +44,7 @@ I'm most interested in problems where **systems engineering** meets **machine le
 - **4th place**, CCL Hackathon 2026 (500+ teams)
 - **300+** problems solved on LeetCode & CodeForces
 - **Top 10** at Honeywell SDG Hackspace 2025
+- Mentored **100+** students in technical workshops
 - Deep Learning Specialization (Coursera)
 - Microsoft Azure AI Fundamentals certified
 
