@@ -8,7 +8,7 @@ image:
   alt: "Manas Sharma - Software Engineer"
 ---
 
-I'm a final-year CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've shipped backend infrastructure at a fintech startup, built a distributed message broker measured at 262K messages per second with fsync on, VLM evaluation pipelines with systematic prompt engineering and statistical significance testing, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
+I'm a final-year CS undergrad at **Manipal Institute of Technology, Bengaluru** and I spend most of my time building things that work at scale. I've shipped backend infrastructure at a fintech startup, built a distributed message broker measured at 262K messages per second with fsync on, VLM evaluation pipelines with systematic prompt engineering and statistical significance testing, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
 
 ## My Path into Engineering
 
