@@ -1,14 +1,14 @@
 ---
 layout: /src/layouts/MarkdownAbout.astro
 title: "Manas Sharma | Software Engineer"
-description: "Software Engineer specializing in distributed systems, backend engineering, and AI/ML. Final-year B.Tech CS at Manipal; Backend Engineering Intern at RupeeFlo, previously ML Intern at Reliance Industries."
+description: "Software Engineer specializing in distributed systems, backend engineering, and AI/ML. Final-year B.Tech CS at Manipal; Backend Engineering Intern at RupeeFlo (fintech) and ML Intern at Reliance Industries."
 author: "Manas Sharma"
 image:
   url: ""
   alt: "Manas Sharma - Software Engineer"
 ---
 
-I'm a final-year CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've shipped backend infrastructure at a fintech startup, built distributed message brokers that handle 100K+ messages per second, VLM evaluation pipelines with systematic prompt engineering, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
+I'm a final-year CS undergrad at **Manipal Academy of Higher Education** and I spend most of my time building things that work at scale. I've shipped backend infrastructure at a fintech startup, built a distributed message broker measured at 262K messages per second with fsync on, VLM evaluation pipelines with systematic prompt engineering and statistical significance testing, multimodal deep learning systems trained on millions of data points, and real-time computer vision systems deployed in corporate environments.
 
 ## My Path into Engineering
 
@@ -20,7 +20,7 @@ At **Manipal**, I've kept an **8.5 CGPA** while focusing heavily on building rea
 
 I think the best way to actually learn distributed systems is to build one yourself. So I wrote a **Kafka-inspired message broker in Go**: HashiCorp Raft for consensus, with my own storage engine, partition sharding, ISR replication, and gRPC producer/consumer protocol on top. Reading the Raft paper to understand what the library was doing under the hood taught me more than any course.
 
-On the AI/ML side, I built a **Driving Scene Description Generator** that processes autonomous driving images through Vision-Language Models with 8 systematically designed prompt variants and evaluates the outputs against ground truth using 8 different metrics. The most valuable part was building the AI error analysis agent that detects systematic failure patterns and auto-generates improved prompts.
+On the AI/ML side, I built a **Driving Scene Description Generator** that processes autonomous driving images through Vision-Language Models with 8 systematically designed prompt variants and evaluates the outputs against ground truth using 9 metrics — 800 evaluations across 100 BDD100K scenes, with bootstrap confidence intervals and paired permutation tests behind every claim. The most valuable part was building the AI error analysis agent that detects systematic failure patterns and auto-generates improved prompts.
 
 I also built **PriceScope**, a multimodal deep learning system trained on 1.48 million Mercari listings. It fuses BiLSTM text encoders with categorical embeddings for price prediction, complete with Optuna tuning, SHAP explainability, and ONNX export. The full stack runs with FastAPI, Next.js, and MongoDB.
 
@@ -28,7 +28,7 @@ And **NeuralRAG**, a self-correcting RAG pipeline that validates its own outputs
 
 ## Industry Experience
 
-I'm currently a **Backend Engineering Intern at RupeeFlo**, a fintech building NRI banking and investment infrastructure. I migrated the document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend, collapsing a 3-call chain into one API and proving **0% divergence** pre-cutover with a PDF-diff parity harness. I designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery, Redis, and atomic SETNX locks validated across 27 replay/race edge cases, and shipped an AI support draft generator to production that turns Freshdesk history and Customer-360 data into agent-reviewable drafts in 10–13 seconds. Working where correctness is regulatory, not optional, changes how you write code.
+Over summer 2026 I was a **Backend Engineering Intern at RupeeFlo**, a fintech building NRI banking and investment infrastructure. I migrated the document-generation (notarization, e-sign) pipelines from Supabase into the core Django backend, collapsing a 3-call chain into one API, cutting processing time by **80%**, and proving **0% divergence** pre-cutover with a PDF-diff parity harness. I designed a 3-tier OTP fallback (WhatsApp → SMS → voice) with Celery, Redis, and atomic SETNX locks validated across 27 replay/race edge cases, and shipped an AI support draft generator to production that turns Freshdesk history and Customer-360 data into agent-reviewable drafts in 10–13 seconds. Working where correctness is regulatory, not optional, changes how you write code.
 
 Before that, at **Reliance Industries Limited** in the Video Analytics Division, I built real-time occupancy detection systems using **YOLOv11** and **DeepSort**, processing 10+ concurrent RTSP camera feeds at 30+ FPS. The most interesting part was figuring out multi-camera spatial deduplication to avoid double-counting people visible from overlapping camera angles.
 

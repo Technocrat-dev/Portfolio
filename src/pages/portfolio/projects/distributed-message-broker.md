@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Distributed Message Broker'
 pubDate: 2025-01-15
-description: 'A high-performance, fault-tolerant distributed message broker in Go with HashiCorp Raft consensus, partition sharding, ISR replication, gRPC transport, and topic-based pub/sub. Achieves 100K+ messages/sec.'
+description: 'A high-performance, fault-tolerant distributed message broker in Go with HashiCorp Raft consensus, partition sharding, ISR replication, gRPC transport, and topic-based pub/sub. Measured 262K msg/s produce with fsync on and 490K msg/s consume.'
 languages: ["go", "grpc", "protobuf", "docker", "kubernetes"]
 image:
   url: ""
@@ -18,26 +18,29 @@ The broker runs as a **3-node cluster** with automatic leader election and log r
 ### Core Components
 - **Consensus Layer**: HashiCorp Raft integration covering leader election, log replication, heartbeat management, and cluster membership
 - **Topic-Partition Manager**: Topic-based pub/sub with **partition sharding**, configurable partition counts (1000+ partitions supported), and replication factors
-- **Replication Layer**: Leader-follower replication with **in-sync replica (ISR)** tracking and **sub-5s failover**
-- **Storage Engine**: Segment-based append-only log with log compaction and configurable fsync policies
+- **Replication Layer**: Leader-follower replication with **in-sync replica (ISR)** tracking, ISR-acknowledged produce, and transparent leader-forwarding
+- **Storage Engine**: Segment-based append-only log with **CRC32C checksums**, torn-write recovery, log compaction, and configurable fsync policies
 - **gRPC API Layer**: Full producer/consumer API with streaming support
 
 ## Performance
 
-- **100K+ messages/second** throughput with batched writes
+Measured end-to-end with a bundled network-path load generator (`cmd/bench`) that drives real client connections, gRPC transport, and the full server request path — not in-process microbenchmarks:
+
+- **262K msg/s produce with fsync on** (500-record batches, p99 56ms)
+- **723K msg/s produce with fsync off** (OS-buffered writes)
+- **490K msg/s consume** draining a 4.9M-message backlog (p99 12ms)
+- **Fsync amortized across 500-record batches** so durability doesn't destroy throughput
+- **Automatic controller and partition-leader failover (~10s)** across 3-node clusters
 - **Gzip / Snappy / LZ4 compression** reducing storage by ~60%
-- **Sub-5s failover** on leader loss
-- **Configurable fsync** so you can choose between durability and throughput
-- **Segment-based storage** with automatic compaction
 
 ## Key Features
 
 - Automatic leader election and failover
 - Log replication across cluster nodes
 - Consumer group support with offset tracking
-- Prometheus metrics integration
-- Kubernetes deployment manifests
-- Comprehensive benchmark suite
+- Prometheus/Grafana monitoring
+- Docker and Kubernetes StatefulSet deployments
+- Reproducible gRPC load-test harness (`cmd/bench`) with JSON output
 
 ## Technologies
 

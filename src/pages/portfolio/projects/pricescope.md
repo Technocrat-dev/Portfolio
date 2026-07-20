@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'PriceScope'
 pubDate: 2025-02-15
-description: 'An end-to-end multimodal deep learning system for marketplace price prediction. Trained on 1.48M Mercari listings with a BiLSTM + Attention + MLP fusion model achieving 0.430 RMSLE, beating XGBoost and LightGBM baselines. Full stack with FastAPI, Next.js, and MongoDB.'
+description: 'An end-to-end multimodal deep learning system for marketplace price prediction. Trained on 1.48M Mercari listings with a BiLSTM + Attention + MLP fusion model achieving 0.420 RMSLE, beating XGBoost/LightGBM baselines and matching a fine-tuned DistilBERT with 4.5x fewer parameters. Full stack with FastAPI, Next.js, and MongoDB.'
 languages: ["python", "pytorch", "fastapi", "nextjs", "ts", "mongo", "docker"]
 image:
   url: ""
@@ -19,7 +19,9 @@ The architecture has three parallel branches that each handle a different input 
 - **Categorical encoder**: Learned embeddings for brand, category (three levels), condition, and shipping, passed through a dense layer with batch normalization
 - **Fusion MLP**: All three branches concatenate into a 576-dimensional vector, then pass through a 576 > 256 > 128 MLP with dropout for the final price regression
 
-The model outputs log-transformed prices with a confidence range. On the held-out test set it hits 0.430 RMSLE, outperforming XGBoost (0.555) and LightGBM (0.559) because it can extract semantic signals from free-text that tree models can't access.
+The model outputs log-transformed prices with a confidence range. On the held-out test set it hits 0.420 RMSLE, outperforming XGBoost and LightGBM baselines because it can extract semantic signals from free-text that tree models can't access.
+
+To make sure the classic-vs-transformer trade-off was measured rather than assumed, I also fine-tuned a **DistilBERT + tabular** variant on identical splits and objective. The transformer landed within ~2% of the BiLSTM — without beating it — while carrying **4.5x the parameters** and roughly 10x the inference cost, so the lighter model stays in production.
 
 ## ML Engineering
 
@@ -33,7 +35,7 @@ This is not just a notebook. The full pipeline includes:
 
 ## Full Stack Deployment
 
-The model serves predictions through a FastAPI backend with rate limiting, response caching, and optional API key auth. A Next.js frontend provides:
+The model serves predictions through a FastAPI backend with rate limiting, response caching, SHAP explanations, and an LLM-powered listing-critique endpoint (Gemini or Claude, provider-pluggable) that pairs the ML price estimate with an independent LLM estimate and structured listing feedback. The backend is deployed on GCP Cloud Run with GitHub Actions CI. A Next.js frontend provides:
 
 - **Prediction form** for entering product details and getting instant price estimates
 - **Model dashboard** with training metrics, loss curves, and prediction history

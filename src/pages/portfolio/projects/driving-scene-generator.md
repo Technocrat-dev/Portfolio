@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Driving Scene Description Generator'
 pubDate: 2025-02-20
-description: 'An automated VLM pipeline that generates structured scene descriptions from autonomous driving images. Features 8 prompt engineering strategies, an 8-metric evaluation framework, and an AI agent for error analysis.'
+description: 'An automated VLM pipeline that generates structured scene descriptions from autonomous driving images. Compares 8 prompt strategies across 9 metrics on 100 BDD100K scenes (800 evaluations) with statistical significance testing, plus an AI agent for error analysis.'
 languages: ["python", "docker", "pydantic"]
 image:
   url: ""
@@ -32,23 +32,26 @@ The real focus is on the prompt engineering side. I built 8 systematically desig
 
 ## Evaluation Framework
 
-8 metrics that cover different aspects of VLM output quality:
+9 metrics that cover different aspects of VLM output quality:
 
 - **BERTScore F1** for semantic similarity against ground truth
-- **Hallucination rate** tracking false positives/negatives per object category
+- **Hallucination rate** tracking false-positive object categories
+- **Miss rate** tracking false-negative categories against ground truth
 - **Completeness scoring** checking coverage of required output fields
 - **Count accuracy** (MAE) comparing predicted vs ground truth object counts
 - **Spatial grounding** evaluating object positions on a 3x3 zone grid
 - **Weather and lighting accuracy** against BDD100K labels
-- **LLM-as-Judge** for overall quality rating
+- **Image-grounded LLM-as-Judge** for overall quality rating
+
+Every claim is backed by statistics: 95% bootstrap confidence intervals per variant, and paired permutation tests against the zero-shot baseline.
 
 ## Results
 
-Structured-output prompting (the combined role-play + chain-of-thought + anti-hallucination variant) cut hallucinations by 35% and count error by 38% versus the zero-shot baseline.
+Across 100 BDD100K scenes (800 evaluations), schema-constrained prompting cut miss rate from 28.9% to 26.2% and count error by 5%, both significant at p < 0.05 under paired permutation tests. Just as interesting were the negative results: no prompt variant significantly moved hallucination rate, and few-shot examples produced the best BERTScore while doing nothing for actual task accuracy — a good reminder that semantic-similarity metrics can reward fluency over correctness.
 
 ## AI Agent
 
-An agent that reads evaluation results, detects systematic error patterns (like hallucinating buses or confusing overcast with clear weather), and automatically generates prompt improvements to address those failures. The pipeline runs a dual VLM backend with rate-limit-aware checkpoint/resume orchestration, so a long evaluation run can pick back up without losing progress.
+An agent that reads evaluation results, detects systematic error patterns (like hallucinating buses or confusing overcast with clear weather), and automatically generates prompt improvements to address those failures. The pipeline runs a dual VLM backend with rate-limit-aware checkpoint/resume orchestration — the full 800-call run was recovered across daily API quota limits without losing progress. An instrument-style analysis dashboard visualizes per-variant results, confidence intervals, and failure patterns.
 
 ## Technologies
 
